@@ -38,7 +38,7 @@ describe('test sequence', () => {
 
     sequence.add(test, 'main', [])
     expect(sequence).toMatchSequence()
-  
+
     await quant(1)
     sequence.add(test, 'first', [1])
     expect(sequence).toMatchSequence()

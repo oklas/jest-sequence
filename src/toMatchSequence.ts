@@ -11,9 +11,7 @@ import {
 } from 'jest-matcher-utils'
 import CallSequence from './Sequence'
 
-const toMatchSequence: MatcherFunction<[]> = (
-  actual,
-) => {
+const toMatchSequence: MatcherFunction<[]> = (actual) => {
   if (actual instanceof CallSequence === false) {
     throw new Error('These must be of type CallSequence!')
   }

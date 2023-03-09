@@ -25,7 +25,7 @@ export default class Sequence {
 
   expectSync() {
     const max = Math.max(this._received.length, this._expected.length)
-    for (let i of Array(max).keys()) {
+    for (const i of Array(max).keys()) {
       expect(this._received[i]).toEqual(this._expected[i])
     }
   }
@@ -35,7 +35,7 @@ export default class Sequence {
     method: M,
     args: unknown[],
   ) {
-    const callId = CallSequence.prototype._callId(object, method)
+    const callId = Sequence.prototype._callId(object, method)
     this._expected.push([callId, args])
   }
 
@@ -60,7 +60,7 @@ export default class Sequence {
     // @ts-ignore
     object._CallSequenceForTest = this._received
     spy.mockImplementation(function (this: any, ...args) {
-      const callId = CallSequence.prototype._callId(this as T, methodKey)
+      const callId = Sequence.prototype._callId(this as T, methodKey)
       this._CallSequenceForTest.push([callId, args])
       return original.apply(this, args)
     })
