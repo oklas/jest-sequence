@@ -4,6 +4,7 @@
     "types": ["node"],
     "outDir": "./lib",
     "sourceRoot": "./lib",
+    "types": ["node", "jest"],
   },
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
