@@ -68,3 +68,13 @@ The utility function `quant(x)` is simple wrapper for `timeout(x * quantDuration
 
 The variable `quantDuration` by default is 200ms and may be modified via
 environment variable `JEST_SEQUENCE_QUANT`.
+
+As of now only one `Sequence` instance may be instantiated per test case or
+several instances per test case must not share same methods to spy on.
+
+Methods `received()` and `expected()` returns internal representation of
+received and expected sequnces (received from spy method and added manually)
+respectively. This methods is just for reference (or debug) - representation
+of sequences is subject to change.
+
+Method `clean()` - does empty of received and expected sequences.
