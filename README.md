@@ -64,7 +64,7 @@ describe('test sequence', () => {
 
 The utility function `timeout` is just promisify `setTimeout()`.
 
-The utility function `quant(x)` is simple wrapper for `timeout(x * quantTimeout)`.
+The utility function `quant(x)` is simple wrapper for `timeout(x * quantDuration)`.
 
-The internal variable `quantTimeout` by default is 200ms and may be modified via
+The variable `quantDuration` by default is 200ms and may be modified via
 environment variable `JEST_SEQUENCE_QUANT`.
