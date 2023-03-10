@@ -19,7 +19,7 @@
     "lib": ["es2017", "dom"],
     "types": ["node", "jest"],
     "baseUrl": ".",
-    "rootDir": "./",
+    "rootDir": "./src",
     "paths": {
       "mocks": ["./__mocks__"],
       "mocks/*": ["./__mocks__/*"],
